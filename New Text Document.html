@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working With Children, Families, and Communities in Contemporary Society</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            oswald: ['Oswald', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Inter', sans-serif; font-feature-settings: 'cv11', 'ss01'; }
+    ::selection { background-color: #E5E5E5; color: #171717; }
+    html { scroll-behavior: smooth; }
+    .glass-nav { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, padding 0.3s ease; }
+    .accordion-content.open { max-height: 2000px; }
+    .accordion-icon { transition: transform 0.3s ease; }
+    .accordion-icon.rotated { transform: rotate(180deg); }
+    .section-card { transition: background-color 0.15s ease; }
+    .nav-link { transition: color 0.15s ease; }
+    .nav-link:hover { color: #171717; }
+    .back-to-top { transition: opacity 0.3s ease, transform 0.3s ease; }
+    .sub-section-num { font-family: 'Oswald', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 100%); }
+    @media (max-width: 767px) {
+      .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+      .mobile-menu.open { max-height: 600px; }
+    }
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 antialiased">
+
+  <!-- Navigation -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 h-20 border-b border-neutral-200/50">
+    <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3 flex-shrink-0">
+        <img src="https://z-cdn-media.chatglm.cn/files/bfbcfa92-8e17-4cf3-a750-a43dacaa0aca.png?auth_key=1877110271-a73d8fd435534c6484c16e907910e594-0-dc97d2fe62ba7e11bd0da3568cd30b63" alt="Logo" class="h-12 w-auto object-contain">
+      </a>
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="#economic" class="nav-link text-sm font-medium text-neutral-500">Economic</a>
+        <a href="#social" class="nav-link text-sm font-medium text-neutral-500">Social</a>
+        <a href="#cultural" class="nav-link text-sm font-medium text-neutral-500">Cultural & Diversity</a>
+        <a href="#health" class="nav-link text-sm font-medium text-neutral-500">Health & Wellbeing</a>
+        <a href="#crisis" class="nav-link text-sm font-medium text-neutral-500">Crisis & Emergency</a>
+      </div>
+      <!-- Mobile Toggle -->
+      <button id="menuToggle" class="lg:hidden p-2 text-neutral-900">
+        <span class="iconify" data-icon="lucide:menu" data-width="24" data-height="24"></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu lg:hidden bg-white border-b border-neutral-200">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#economic" class="nav-link text-sm font-medium text-neutral-500 py-2">Economic Contexts</a>
+        <a href="#social" class="nav-link text-sm font-medium text-neutral-500 py-2">Social Contexts</a>
+        <a href="#cultural" class="nav-link text-sm font-medium text-neutral-500 py-2">Cultural & Diversity Contexts</a>
+        <a href="#health" class="nav-link text-sm font-medium text-neutral-500 py-2">Health & Wellbeing Contexts</a>
+        <a href="#crisis" class="nav-link text-sm font-medium text-neutral-500 py-2">Crisis & Emergency Contexts</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-24 lg:pt-32 pb-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-8">
+          <div>
+            <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-500 font-mono mb-4">Educational Resource</span>
+            <h1 class="font-oswald font-medium text-[40px] md:text-[56px] lg:text-[72px] leading-[0.9] tracking-[-0.05em] uppercase text-neutral-900">
+              Working With Children, Families, and Communities
+            </h1>
+            <p class="mt-4 font-oswald text-[20px] md:text-[24px] font-light tracking-[-0.025em] text-neutral-500">
+              In Contemporary Society
+            </p>
+          </div>
+          <p class="text-base md:text-lg font-light leading-relaxed text-neutral-600 max-w-xl">
+            A comprehensive exploration of the diverse contexts shaping children's lives in modern Australia — from economic pressures and social dynamics to cultural identities, health challenges, and crisis responses.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#economic" class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-50 text-xs font-semibold tracking-[0.05em] uppercase px-7 py-3.5 rounded-full transition-colors">
+              Explore Contexts
+              <span class="iconify" data-icon="lucide:arrow-down" data-width="14" data-height="14"></span>
+            </a>
+            <a href="#overview" class="inline-flex items-center gap-2 bg-white hover:bg-neutral-100 text-neutral-900 text-xs font-semibold tracking-[0.05em] uppercase px-7 py-3.5 rounded-full border border-neutral-200 transition-colors">
+              Overview
+            </a>
+          </div>
+        </div>
+        <!-- Right Visual -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://picsum.photos/seed/children-community/640/640.jpg" alt="Children and Community" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 border border-neutral-200/50">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center">
+                  <span class="iconify text-neutral-50" data-icon="lucide:book-open" data-width="18" data-height="18"></span>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-neutral-900">5 Contexts</p>
+                  <p class="text-xs text-neutral-500">30 Topics</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-2 -right-2 bg-white rounded-xl shadow-lg px-3 py-2 border border-neutral-200/50">
+              <p class="text-xs font-medium text-neutral-700">🇦🇺 Australian Focus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Bar -->
+  <section id="overview" class="py-12 border-y border-neutral-200/50 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+        <a href="#economic" class="group flex flex-col items-center text-center gap-3 py-4 rounded-2xl hover:bg-neutral-50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+            <span class="iconify text-neutral-700" data-icon="lucide:trending-up" data-width="22" data-height="22"></span>
+          </div>
+          <span class="text-xs font-semibold tracking-[0.025em] text-neutral-900">Economic Contexts</span>
+        </a>
+        <a href="#social" class="group flex flex-col items-center text-center gap-3 py-4 rounded-2xl hover:bg-neutral-50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+            <span class="iconify text-neutral-700" data-icon="lucide:users" data-width="22" data-height="22"></span>
+          </div>
+          <span class="text-xs font-semibold tracking-[0.025em] text-neutral-900">Social Contexts</span>
+        </a>
+        <a href="#cultural" class="group flex flex-col items-center text-center gap-3 py-4 rounded-2xl hover:bg-neutral-50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+            <span class="iconify text-neutral-700" data-icon="lucide:globe" data-width="22" data-height="22"></span>
+          </div>
+          <span class="text-xs font-semibold tracking-[0.025em] text-neutral-900">Cultural & Diversity</span>
+        </a>
+        <a href="#health" class="group flex flex-col items-center text-center gap-3 py-4 rounded-2xl hover:bg-neutral-50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+            <span class="iconify text-neutral-700" data-icon="lucide:heart-pulse" data-width="22" data-height="22"></span>
+          </div>
+          <span class="text-xs font-semibold tracking-[0.025em] text-neutral-900">Health & Wellbeing</span>
+        </a>
+        <a href="#crisis" class="group flex flex-col items-center text-center gap-3 py-4 rounded-2xl hover:bg-neutral-50 transition-colors col-span-2 md:col-span-1">
+          <div class="w-12 h-12 rounded-xl bg-neutral-100 group-hover:bg-neutral-200 flex items-center justify-center transition-colors">
+            <span class="iconify text-neutral-700" data-icon="lucide:shield-alert" data-width="22" data-height="22"></span>
+          </div>
+          <span class="text-xs font-semibold tracking-[0.025em] text-neutral-900">Crisis & Emergency</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 1: ECONOMIC CONTEXTS ==================== -->
+  <section id="economic" class="py-20 md:py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <div class="mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-400 font-mono mb-3">Section 01</span>
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-neutral-50" data-icon="lucide:trending-up" data-width="26" data-height="26"></span>
+          </div>
+          <div>
+            <h2 class="font-oswald text-[30px] md:text-[36px] font-medium tracking-[-0.025em] uppercase text-neutral-900">Economic Contexts</h2>
+            <p class="mt-2 text-base md:text-lg font-light leading-relaxed text-neutral-500 max-w-2xl">Understanding how economic conditions, employment patterns, and financial pressures shape the environments in which children grow, learn, and thrive.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Items -->
+      <div class="space-y-3">
+
+        <!-- 1.1 Understanding the Context -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">01</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Understanding the Context</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Economic contexts encompass the broad financial conditions that influence family life, including household income, employment stability, cost of living, and access to economic resources. In Australia, rising housing costs, wage stagnation, and the increasing prevalence of gig economy work have significantly altered the economic landscape for families with children.</p>
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Child poverty remains a pressing concern, with approximately 1 in 6 Australian children living below the poverty line. Economic disadvantage is not uniform — it intersects with geography, family structure, and cultural background to create complex patterns of vulnerability.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                  <img src="https://picsum.photos/seed/economic-context/600/400.jpg" alt="Economic Context" class="w-full h-48 object-cover rounded-xl">
+                </div>
+              </div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Household Income</span>
+                <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Employment Stability</span>
+                <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Cost of Living</span>
+                <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Gig Economy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.2 Impact on Children and Families -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">02</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Impact on Children and Families</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Economic hardship has profound and well-documented effects on children's development. Research consistently shows that children growing up in low-income households are more likely to experience developmental delays, lower educational attainment, and poorer health outcomes. The stress of financial insecurity affects parental mental health, which in turn impacts parenting capacity and the quality of the home environment.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Material deprivation — the inability to access basic necessities such as nutritious food, adequate housing, and educational resources — directly limits children's opportunities. Social exclusion often accompanies economic disadvantage, creating barriers to participation in community activities, peer relationships, and cultural experiences that support healthy development.</p>
+                <div class="bg-neutral-50 rounded-xl p-5 border border-neutral-100">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-500 mb-2">Key Statistics</p>
+                  <ul class="space-y-2 text-sm font-light text-neutral-600">
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Children in lowest income quintile are 2-3 times more likely to experience developmental vulnerability</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Financial stress correlates with higher rates of family conflict and relationship breakdown</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Housing instability disrupts school attendance and social connections</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.3 Social Policy and Australian Responses -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">03</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Social Policy and Australian Responses</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Australia's social policy framework includes a range of measures designed to support families experiencing economic disadvantage. The Family Tax Benefit system, including FTB-A and FTB-B, provides income-tested payments to assist with the costs of raising children. The Child Care Subsidy aims to improve workforce participation by reducing out-of-pocket child care costs.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Despite these interventions, gaps remain. The rate of JobSeeker and related payments has been widely criticised as inadequate, particularly for single parents. The National Affordable Housing Agreement has not met its targets, and waiting lists for public housing continue to grow. Recent inquiries, including the Senate committee on poverty, have called for a comprehensive redesign of the income support system.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Family Tax Benefit</span>
+                  <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">Child Care Subsidy</span>
+                  <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">JobSeeker Payment</span>
+                  <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-600">National Housing Agreement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.4 Strategies for Practice -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">04</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Strategies for Practice</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Educators and practitioners working with economically disadvantaged families should adopt a strengths-based approach that recognises the resourcefulness and resilience many families demonstrate. Practical strategies include ensuring that early learning environments are genuinely inclusive and free from stigmatisation, providing fee relief information discreetly, and connecting families with financial counselling services.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Advocacy is a critical component of practice. This may involve supporting individual families to navigate complex welfare systems, or engaging in collective advocacy for policy change. Understanding the structural drivers of disadvantage helps practitioners avoid deficit-based thinking and instead focus on systemic barriers.</p>
+                <div class="bg-neutral-900 text-neutral-50 rounded-xl p-5">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-400 mb-3">Practice Principles</p>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Strengths-based perspective</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Non-stigmatising practices</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Active advocacy</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Systemic awareness</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.5 Community and Professional Partnerships -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">05</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Community and Professional Partnerships</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Effective responses to economic disadvantage require collaborative partnerships across sectors. Early childhood services, schools, community health centres, financial counselling services, and housing agencies all play important roles. Communities of Practice that bring together diverse professionals can enhance coordinated support for families.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Place-based initiatives — such as the Australian Government's Communities for Children program — demonstrate the value of locally-driven partnerships that respond to specific community needs. These models emphasise community voice and build on existing social capital rather than imposing external solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.6 Resources for Educators and Children -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">06</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Resources for Educators and Children</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Key resources include the AEDC (Australian Early Development Census) data, which provides community-level snapshots of children's development, the COAG Reform Council reports on productivity and social inclusion, and the Smith Family's research on disadvantage and education. For children, picture books and resources that normalise diverse family circumstances without pathologising economic difference are valuable additions to early learning environments.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">AEDC Data Reports</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">The Smith Family Research</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:book-open" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Inclusive Picture Books</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:link" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Services Australia Guide</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-6"><div class="border-t border-neutral-200/50"></div></div>
+
+  <!-- ==================== SECTION 2: SOCIAL CONTEXTS ==================== -->
+  <section id="social" class="py-20 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-400 font-mono mb-3">Section 02</span>
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-neutral-50" data-icon="lucide:users" data-width="26" data-height="26"></span>
+          </div>
+          <div>
+            <h2 class="font-oswald text-[30px] md:text-[36px] font-medium tracking-[-0.025em] uppercase text-neutral-900">Social Contexts</h2>
+            <p class="mt-2 text-base md:text-lg font-light leading-relaxed text-neutral-500 max-w-2xl">Examining the social structures, relationships, and community dynamics that influence children's development and family functioning in contemporary Australia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 2.1 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">01</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Understanding the Context</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Social contexts refer to the web of relationships, institutions, and cultural norms that shape daily life. For children and families, this includes family structures, peer networks, community connections, digital environments, and broader social trends. Australian society has undergone significant social change — family structures are increasingly diverse, digital technology has transformed social interaction, and community ties have evolved in complex ways.</p>
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">The concept of social capital is central to understanding social contexts. Bonding social capital (strong ties within groups) and bridging social capital (connections across groups) both contribute to family wellbeing. Communities with high social capital tend to have better outcomes for children, including improved safety, stronger educational engagement, and greater resilience during difficult times.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                  <img src="https://picsum.photos/seed/social-context/600/400.jpg" alt="Social Context" class="w-full h-48 object-cover rounded-xl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.2 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">02</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Impact on Children and Families</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Social isolation and loneliness affect both children and adults, with significant consequences for mental health and development. For children, limited social networks can reduce opportunities for play-based learning, language development, and the formation of secure attachments beyond the family. For parents, social isolation is a known risk factor for postnatal depression, parenting stress, and child maltreatment.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Changing family structures — including the growth of single-parent families, blended families, and same-sex parented families — present both opportunities and challenges. While diversity in family form is increasingly accepted, families that deviate from the traditional model may still encounter social stigma, institutional barriers, and additional complexity in navigating support systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.3 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">03</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Social Policy and Australian Responses</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Australian social policy has increasingly recognised the importance of social connections. The National Framework for Protecting Australia's Children emphasises the role of community in child safety and wellbeing. The Child Care Package includes measures to support social inclusion, and the National Disability Insurance Scheme (NDIS) has transformed support for children with disability and their families.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Programs such as Parents as Teachers, Home Interaction Program for Parents and Youngsters (HIPPY), and Supported Playgroups demonstrate government investment in strengthening parent-child relationships and building social networks. The recognition of same-sex marriage in 2017 removed a significant legal barrier for many families, though challenges around assisted reproduction and parentage rights persist in some jurisdictions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.4 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">04</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Strategies for Practice</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Practitioners should actively facilitate social connection rather than assuming it will occur naturally. This includes creating welcoming, inclusive environments that value diverse family structures, designing programs that bring families together in non-stigmatising ways, and supporting children's social skill development through guided play and peer interaction.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Digital literacy has become a critical practice area. Helping families navigate online environments safely, understanding the impact of screen time on development, and leveraging digital tools to maintain connections (particularly for geographically isolated families) are all essential competencies for contemporary practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.5 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">05</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Community and Professional Partnerships</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Building genuine community partnerships requires moving beyond transactional relationships. Effective partnerships are characterised by shared goals, mutual respect, transparent communication, and distributed power. Early learning centres that function as community hubs — offering parent groups, health visiting services, and community events — can play a pivotal role in strengthening social fabric.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Interprofessional collaboration is equally important. Social workers, educators, health professionals, and community development workers each bring valuable perspectives. Models such as the Tasmanian Child and Family Centres demonstrate how co-located, integrated services can improve outcomes for families experiencing social isolation or complexity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.6 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">06</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Resources for Educators and Children</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Recommended resources include the Australian Institute of Family Studies (AIFS) publications on family diversity, the Raising Children Network's evidence-based parenting resources, Early Childhood Australia's position statements on inclusion, and the eSafety Commissioner's resources for digital safety. For children, books that represent diverse family structures — such as those shortlisted for the Australian Book Industry Awards — support belonging and identity formation.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">AIFS Publications</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:monitor" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Raising Children Network</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:shield" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">eSafety Resources</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:book-open" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Diverse Family Books</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-6"><div class="border-t border-neutral-200/50"></div></div>
+
+  <!-- ==================== SECTION 3: CULTURAL AND DIVERSITY CONTEXTS ==================== -->
+  <section id="cultural" class="py-20 md:py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-400 font-mono mb-3">Section 03</span>
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-neutral-50" data-icon="lucide:globe" data-width="26" data-height="26"></span>
+          </div>
+          <div>
+            <h2 class="font-oswald text-[30px] md:text-[36px] font-medium tracking-[-0.025em] uppercase text-neutral-900">Cultural and Diversity Contexts</h2>
+            <p class="mt-2 text-base md:text-lg font-light leading-relaxed text-neutral-500 max-w-2xl">Exploring the rich tapestry of cultural identities, languages, beliefs, and experiences that characterise Australian families and communities, with particular attention to Aboriginal and Torres Strait Islander perspectives.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 3.1 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">01</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Understanding the Context</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Australia is one of the most culturally diverse nations in the world. Nearly 30% of the population was born overseas, and over 300 languages are spoken in Australian homes. This diversity enriches the social fabric but also creates complexities for practitioners seeking to provide culturally responsive services. Cultural contexts shape parenting beliefs, child-rearing practices, attitudes toward education, health-seeking behaviour, and family roles.</p>
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Central to any discussion of cultural contexts in Australia is the recognition of Aboriginal and Torres Strait Islander peoples as the First Nations custodians of this land. Understanding the ongoing impacts of colonisation, the Stolen Generations, and systemic racism is essential for all practitioners working with children and families. Cultural contexts also include dimensions of disability, gender identity, sexual orientation, and religious belief.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                  <img src="https://picsum.photos/seed/cultural-diversity/600/400.jpg" alt="Cultural Diversity" class="w-full h-48 object-cover rounded-xl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.2 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">02</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Impact on Children and Families</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Cultural disconnection and identity confusion can have serious consequences for children's mental health and wellbeing. For Aboriginal and Torres Strait Islander children, the erosion of cultural knowledge and language threatens cultural continuity and contributes to intergenerational trauma. Refugee and migrant children may experience the tensions of acculturation, balancing heritage culture with the demands of a new society.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Conversely, strong cultural identity serves as a protective factor. Children who maintain connection to their cultural heritage demonstrate higher self-esteem, stronger family bonds, and greater resilience. Bilingualism is associated with cognitive advantages, and cultural competence in children supports empathy and respect for difference.</p>
+                <div class="bg-neutral-50 rounded-xl p-5 border border-neutral-100">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-500 mb-2">Key Considerations</p>
+                  <ul class="space-y-2 text-sm font-light text-neutral-600">
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Intergenerational trauma in Aboriginal and Torres Strait Islander communities</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Acculturation stress for refugee and migrant families</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Cultural identity as a protective factor</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Impact of racism and discrimination on child development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.3 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">03</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Social Policy and Australian Responses</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Key policy frameworks include the National Aboriginal and Torres Strait Islander Early Childhood Strategy, the Multicultural Framework Review, and the Disability Discrimination Act. The Early Years Learning Framework (EYLF) explicitly includes cultural competence as a core practice principle, and the revised EYLF (2022) strengthens its emphasis on Aboriginal and Torres Strait Islander perspectives.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">The Closing the Gap initiative, while well-intentioned, has been critiqued for its deficit framing and lack of genuine partnership with Aboriginal and Torres Strait Islander communities. The National Agreement on Closing the Gap (2020) represents a shift toward shared decision-making, with four priority reforms focused on partnership, self-determination, and community-led solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.4 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">04</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Strategies for Practice</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Culturally responsive practice moves beyond superficial celebrations of diversity to embed respect for culture in every aspect of service delivery. This includes learning about the cultural backgrounds of families in your service, adapting communication styles, incorporating cultural perspectives into curriculum, and critically reflecting on one's own cultural positionality and biases.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">For Aboriginal and Torres Strait Islander children, practice should be guided by the principles of self-determination and connection to Country. Building genuine relationships with local Elders and Aboriginal organisations, embedding Aboriginal perspectives in learning programs, and ensuring that physical environments reflect and respect Indigenous presence are all essential strategies.</p>
+                <div class="bg-neutral-900 text-neutral-50 rounded-xl p-5">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-400 mb-3">Cultural Responsiveness Principles</p>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Critical self-reflection</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Genuine relationship building</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Embedding diverse perspectives</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Self-determination</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.5 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">05</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Community and Professional Partnerships</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Partnerships with culturally specific organisations — such as multicultural resource centres, Aboriginal medical services, and ethnic community councils — are essential for culturally responsive practice. These organisations bring expertise, trust, and community connections that external services cannot replicate. Partnerships should be characterised by genuine collaboration rather than tokenistic consultation.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Professional development in cultural competence should be ongoing and go beyond one-off training. Programs delivered by community members themselves — such as the Aboriginal Cultural Competence Framework developed by SNAICC — provide deeper learning than generic cultural awareness training. Mentorship and community immersion experiences can further enhance practitioners' cultural understanding.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.6 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">06</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Resources for Educators and Children</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Essential resources include SNAICC's resources for Aboriginal and Torres Strait Islander children, the EYLF and its supporting documentation, the Foundation for Young Australians' research on multiculturalism, and the Scanlon Foundation's Mapping Social Cohesion reports. Children's literature by First Nations authors — such as the works of Alison Lester collaborating with Aboriginal communities, or books by authors like Gregg Dreise — provide authentic cultural perspectives for early learning settings.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">SNAICC Resources</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:book-open" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">First Nations Literature</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Scanlon Foundation Reports</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:graduation-cap" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">EYLF Framework</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-6"><div class="border-t border-neutral-200/50"></div></div>
+
+  <!-- ==================== SECTION 4: HEALTH AND WELLBEING CONTEXTS ==================== -->
+  <section id="health" class="py-20 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-400 font-mono mb-3">Section 04</span>
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-neutral-50" data-icon="lucide:heart-pulse" data-width="26" data-height="26"></span>
+          </div>
+          <div>
+            <h2 class="font-oswald text-[30px] md:text-[36px] font-medium tracking-[-0.025em] uppercase text-neutral-900">Health and Wellbeing Contexts</h2>
+            <p class="mt-2 text-base md:text-lg font-light leading-relaxed text-neutral-500 max-w-2xl">Investigating the physical, mental, and emotional health factors that affect children and families, and the systems that support health and wellbeing across the lifespan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 4.1 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">01</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Understanding the Context</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Health and wellbeing contexts encompass the full spectrum of factors that determine physical, mental, emotional, and social health. The World Health Organization's definition of health as "a state of complete physical, mental and social wellbeing and not merely the absence of disease" underscores the holistic nature of this context. For children, health is inseparable from development — optimal health provides the foundation for learning, relationships, and participation.</p>
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">In Australia, significant health challenges facing children and families include rising rates of childhood obesity and related conditions, increasing mental health concerns among young people, health inequities experienced by Aboriginal and Torres Strait Islander children and families in rural and remote areas, and the health impacts of climate change, including heat stress, air quality, and food security.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                  <img src="https://picsum.photos/seed/health-wellbeing/600/400.jpg" alt="Health and Wellbeing" class="w-full h-48 object-cover rounded-xl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">02</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Impact on Children and Families</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Poor health in childhood has cascading effects across the lifespan. Chronic health conditions affect school attendance, social participation, and family dynamics. The growing prevalence of mental health conditions in children — including anxiety, depression, and behavioural disorders — demands urgent attention. The COVID-19 pandemic exacerbated existing mental health concerns and disrupted access to health services, with lasting effects still being understood.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Parental health directly affects children. Maternal perinatal mental health is a particular concern, with postnatal depression affecting up to 1 in 7 new mothers in Australia. Parental chronic illness, substance use, and mental health conditions can disrupt family functioning and children's sense of security. The intergenerational transmission of trauma — particularly in Aboriginal and Torres Strait Islander communities — highlights the long-term consequences of unaddressed health needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.3 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">03</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Social Policy and Australian Responses</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Australia's health policy landscape includes Medicare (universal health insurance), the National Disability Insurance Scheme (NDIS), and the National Mental Health and Suicide Prevention Plan. Child and family health services, including maternal and child health nursing, the Healthy Kids Check, and immunisation programs, form a critical prevention and early intervention infrastructure.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Recent initiatives include the Head to Health children's mental health centres, investment in perinatal mental health screening, and the National Aboriginal and Torres Strait Islander Health Plan. However, persistent gaps remain — particularly in mental health service availability for children under 12, in rural and remote areas, and in culturally appropriate service delivery. The Productivity Commission's 2020 report on mental health identified significant system fragmentation and called for fundamental reform.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.4 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">04</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Strategies for Practice</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Health-promoting practice in early childhood settings includes promoting physical activity, nutritious eating, adequate sleep, and positive social interactions. Educators should understand developmental milestones and be able to identify when a child's development may be at risk. Trauma-informed practice — which recognises the widespread impact of trauma and integrates this knowledge into all aspects of service delivery — is increasingly recognised as essential.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Mental health literacy is a critical skill for all educators. This includes understanding the signs of mental health difficulties in children, knowing how to have supportive conversations with families, and being aware of referral pathways. The Be You initiative — a national mental health in education framework — provides practical tools and professional learning for educators.</p>
+                <div class="bg-neutral-900 text-neutral-50 rounded-xl p-5">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-400 mb-3">Health Promotion in Practice</p>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Trauma-informed approaches</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Mental health literacy</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Developmental monitoring</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Health-promoting environments</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.5 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">05</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Community and Professional Partnerships</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Integrated service models that co-locate health, education, and family support services show promising results. Examples include the Australian Nurse-Family Partnership Program, Child and Family Health Centres in various states, and school-based health hubs. These models reduce barriers to access and enable holistic assessment of children's and families' needs.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Partnerships with allied health professionals — occupational therapists, speech pathologists, psychologists, and dietitians — enhance the capacity of early childhood services to support children with additional health and developmental needs. Building relationships with Aboriginal Community Controlled Health Services ensures culturally safe health support for First Nations children and families.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.6 -->
+        <div class="section-card bg-neutral-50 rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">06</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Resources for Educators and Children</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-200/50 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Key resources include the Be You framework, the Australian Institute of Health and Welfare (AIHW) reports on child health, the National Health and Medical Research Council's guidelines on nutrition and physical activity, and the Raising Children Network's health sections. For children, resources that promote body awareness, emotional literacy, and healthy habits — such as the Sesame Street Healthy Habits materials or the Smiling Mind mindfulness app for children — support health education in age-appropriate ways.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:heart" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Be You Framework</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:file-text" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">AIHW Child Health Data</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:smartphone" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Smiling Mind App</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/50">
+                    <span class="iconify text-neutral-500" data-icon="lucide:apple" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">NHMRC Guidelines</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-6"><div class="border-t border-neutral-200/50"></div></div>
+
+  <!-- ==================== SECTION 5: CRISIS AND EMERGENCY CONTEXTS ==================== -->
+  <section id="crisis" class="py-20 md:py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-neutral-400 font-mono mb-3">Section 05</span>
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-neutral-900 flex items-center justify-center flex-shrink-0">
+            <span class="iconify text-neutral-50" data-icon="lucide:shield-alert" data-width="26" data-height="26"></span>
+          </div>
+          <div>
+            <h2 class="font-oswald text-[30px] md:text-[36px] font-medium tracking-[-0.025em] uppercase text-neutral-900">Crisis and Emergency Contexts</h2>
+            <p class="mt-2 text-base md:text-lg font-light leading-relaxed text-neutral-500 max-w-2xl">Addressing the impact of crises, emergencies, and traumatic events on children and families, and the role of practitioners in supporting recovery, resilience, and preparedness.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <!-- 5.1 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">01</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Understanding the Context</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Crisis and emergency contexts encompass sudden-onset events — such as natural disasters (bushfires, floods, cyclones), pandemics, acts of terrorism, and community violence — as well as ongoing crises such as family domestic violence, child abuse and neglect, and refugee displacement. Australia's geographic and climatic conditions make it particularly prone to natural disasters, with the 2019–2020 Black Summer bushfires and recurring flood events highlighting the vulnerability of communities.</p>
+                  <p class="text-sm font-light leading-relaxed text-neutral-600">Children are disproportionately affected by crises. Their developmental stage makes them more vulnerable to the physical, emotional, and psychological impacts of traumatic events. They depend on adults for safety, yet adults themselves may be traumatised or overwhelmed. Understanding the developmental impact of trauma — and the factors that support resilience and recovery — is essential knowledge for all practitioners.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                  <img src="https://picsum.photos/seed/crisis-emergency/600/400.jpg" alt="Crisis and Emergency" class="w-full h-48 object-cover rounded-xl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.2 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">02</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Impact on Children and Families</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">The impact of crises on children varies by age, developmental stage, prior experiences, and the quality of support available. Common responses include regression in behaviour (such as bedwetting or clinginess), sleep disturbances, separation anxiety, difficulties with concentration and learning, and physical symptoms such as headaches or stomach aches. For some children, trauma responses may develop into post-traumatic stress disorder (PTSD) or other mental health conditions.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Family functioning is often severely disrupted during crises. Loss of housing, employment, and community infrastructure can create secondary stressors that compound the primary trauma. For families experiencing domestic violence — the most common crisis context for many children — the home itself becomes a source of danger rather than safety. The cumulative impact of repeated or chronic exposure to adversity, known as adverse childhood experiences (ACEs), has well-established links to long-term health and social outcomes.</p>
+                <div class="bg-neutral-50 rounded-xl p-5 border border-neutral-100">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-500 mb-2">Children's Crisis Responses</p>
+                  <ul class="space-y-2 text-sm font-light text-neutral-600">
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Behavioural regression and clinginess</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Sleep disturbances and nightmares</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Difficulty concentrating and learning</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Physical symptoms (headaches, stomach aches)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-400 mt-0.5">•</span>Emotional dysregulation (anger, fear, withdrawal)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.3 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">03</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Social Policy and Australian Responses</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Australia has developed significant disaster management frameworks, including the National Disaster Risk Reduction Framework and the Australian Disaster Resilience Framework. The National Strategy for Disaster Resilience recognises the specific needs of children in emergencies. The Royal Commission into National Natural Disaster Arrangements (2020) made specific recommendations regarding child-centred disaster planning and recovery.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">In the domain of family violence, the National Plan to End Violence against Women and Children 2022–2032 represents a coordinated national approach, with specific actions to address the needs of children as victim-survivors. Mandatory reporting requirements exist in all Australian states and territories, obligating certain professionals to report suspected child abuse and neglect. The child protection system, while critical, is widely acknowledged to be under-resourced and in need of reform, with increasing emphasis on prevention and early intervention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.4 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">04</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Strategies for Practice</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">In crisis contexts, practitioners must balance immediate safety needs with longer-term recovery support. Psychological first aid (PFA) — a humane, supportive, and practical response to people in acute distress — is the recommended initial approach, rather than debriefing or single-session interventions, which evidence shows may cause harm. PFA focuses on providing calm, comfort, connection to support, and information.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">For ongoing crisis contexts such as domestic violence, practice must prioritise safety planning, risk assessment, and collaborative decision-making with families. Understanding the dynamics of coercive control, the barriers to leaving violent relationships, and the importance of perpetrator accountability are all essential. Self-care for practitioners is critical — working in crisis contexts carries risks of vicarious trauma, compassion fatigue, and burnout.</p>
+                <div class="bg-neutral-900 text-neutral-50 rounded-xl p-5">
+                  <p class="text-xs font-semibold tracking-[0.05em] uppercase text-neutral-400 mb-3">Crisis Response Principles</p>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Safety first</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Psychological First Aid</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Collaborative decision-making</span></div>
+                    <div class="flex items-start gap-2"><span class="iconify text-neutral-400 mt-0.5 flex-shrink-0" data-icon="lucide:check" data-width="14" data-height="14"></span><span class="text-sm font-light text-neutral-300">Practitioner self-care</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.5 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">05</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Community and Professional Partnerships</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Effective crisis response requires coordination across multiple agencies and levels of government. Emergency services, health services, education, child protection, housing, and community organisations all have roles to play. Pre-established relationships and clear communication channels are critical — crises are not the time to build partnerships from scratch.</p>
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Community-led recovery is increasingly recognised as more effective than top-down approaches. After the Black Summer bushfires, communities that had strong pre-existing social networks and local organisational capacity recovered more quickly. For practitioners, this means investing in community building during non-crisis times — strengthening connections, building local knowledge, and supporting community leadership — as a form of disaster preparedness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.6 -->
+        <div class="section-card bg-white rounded-2xl border border-neutral-200/50 overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left">
+            <div class="flex items-center gap-4">
+              <span class="sub-section-num text-sm font-medium text-neutral-400">06</span>
+              <h3 class="text-base md:text-lg font-medium tracking-[-0.025em] text-neutral-900">Resources for Educators and Children</h3>
+            </div>
+            <span class="iconify accordion-icon text-neutral-400 flex-shrink-0 ml-4" data-icon="lucide:chevron-down" data-width="20" data-height="20"></span>
+          </button>
+          <div class="accordion-content px-6 md:px-8">
+            <div class="pb-6 border-t border-neutral-100 pt-5">
+              <div class="space-y-4">
+                <p class="text-sm font-light leading-relaxed text-neutral-600">Essential resources include the Australian Institute for Disaster Resilience handbook series, Emerging Minds' resources on child mental health in disasters, the Phoenix Australia centre for posttraumatic mental health resources, and state-based child protection mandatory reporting guides. For children, carefully selected picture books — such as those addressing bushfires, floods, or family changes — can support processing of traumatic experiences in developmentally appropriate ways. The Birdie's Tree books developed by the Queensland Centre for Perinatal and Infant Mental Health are specifically designed for young children affected by disasters.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:shield" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Disaster Resilience Handbook</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:brain" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Emerging Minds Resources</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:book-open" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Birdie's Tree Books</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                    <span class="iconify text-neutral-500" data-icon="lucide:phone" data-width="18" data-height="18"></span>
+                    <span class="text-sm font-medium text-neutral-700">Mandatory Reporting Guides</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 text-neutral-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Brand -->
+        <div class="space-y-5">
+          <img src="https://z-cdn-media.chatglm.cn/files/bfbcfa92-8e17-4cf3-a750-a43dacaa0aca.png?auth_key=1877110271-a73d8fd435534c6484c16e907910e594-0-dc97d2fe62ba7e11bd0da3568cd30b63" alt="Logo" class="h-14 w-auto object-contain brightness-0 invert opacity-90">
+          <p class="text-sm font-light leading-relaxed text-neutral-400">A comprehensive educational resource exploring the diverse contexts shaping children's lives in contemporary Australian society.</p>
+        </div>
+        <!-- Sections -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.1em] uppercase text-neutral-500 mb-4">Sections</h4>
+          <div class="space-y-3">
+            <a href="#economic" class="block text-sm font-light text-neutral-400 hover:text-neutral-50 transition-colors">Economic Contexts</a>
+            <a href="#social" class="block text-sm font-light text-neutral-400 hover:text-neutral-50 transition-colors">Social Contexts</a>
+            <a href="#cultural" class="block text-sm font-light text-neutral-400 hover:text-neutral-50 transition-colors">Cultural and Diversity Contexts</a>
+            <a href="#health" class="block text-sm font-light text-neutral-400 hover:text-neutral-50 transition-colors">Health and Wellbeing Contexts</a>
+            <a href="#crisis" class="block text-sm font-light text-neutral-400 hover:text-neutral-50 transition-colors">Crisis and Emergency Contexts</a>
+          </div>
+        </div>
+        <!-- Subsections -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.1em] uppercase text-neutral-500 mb-4">Subsection Topics</h4>
+          <div class="space-y-3">
+            <span class="block text-sm font-light text-neutral-400">Understanding the Context</span>
+            <span class="block text-sm font-light text-neutral-400">Impact on Children and Families</span>
+            <span class="block text-sm font-light text-neutral-400">Social Policy and Australian Responses</span>
+            <span class="block text-sm font-light text-neutral-400">Strategies for Practice</span>
+            <span class="block text-sm font-light text-neutral-400">Community and Professional Partnerships</span>
+            <span class="block text-sm font-light text-neutral-400">Resources for Educators and Children</span>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-neutral-500">© 2025 Working With Children, Families, and Communities in Contemporary Society</p>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-2 text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
+          Back to top
+          <span class="iconify" data-icon="lucide:arrow-up" data-width="14" data-height="14"></span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.accordion-icon');
+      const isOpen = content.classList.contains('open');
+
+      // Close all other accordions in the same section
+      const section = button.closest('section');
+      const allContents = section.querySelectorAll('.accordion-content');
+      const allIcons = section.querySelectorAll('.accordion-icon');
+
+      allContents.forEach(c => c.classList.remove('open'));
+      allIcons.forEach(i => i.classList.remove('rotated'));
+
+      // Toggle current
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.classList.add('rotated');
+      }
+    }
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-neutral-900', 'font-semibold');
+        link.classList.add('text-neutral-500');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('text-neutral-900', 'font-semibold');
+          link.classList.remove('text-neutral-500');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
